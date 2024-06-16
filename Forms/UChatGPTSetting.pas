@@ -731,10 +731,9 @@ begin
   LvStr := edt_Url.Text;
   if (not chk_Offline.Checked) and (LvStr.Contains('localhost')) or (LvStr.Contains('127.0.0.1')) then
   begin
-    if MessageDlg('It seems you are using offline server with an online model, it doesn''t work probably, do you want to save anyway?', mtWarning, [mbYes,mbNo], 0) = mrNo then
+    if MessageDlg('It seems you are using offline server(localhost) with an online model, it doesn''t work probably, do you want to save anyway?', mtWarning, [mbYes,mbNo], 0) = mrNo then
       Exit;
   end;
-
   Result := True;
 end;
 

@@ -27,10 +27,8 @@ object Frm_Setting: TFrm_Setting
     Align = alClient
     TabOrder = 0
     OnChange = pgcSettingChange
-    ExplicitHeight = 545
     object tsMainSetting: TTabSheet
       Caption = 'Main Setting'
-      ExplicitHeight = 515
       object pnlMain: TPanel
         Left = 0
         Top = 0
@@ -38,7 +36,6 @@ object Frm_Setting: TFrm_Setting
         Height = 375
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 515
         object grp_OpenAI: TGroupBox
           Left = 1
           Top = 1
@@ -194,7 +191,6 @@ object Frm_Setting: TFrm_Setting
           Height = 213
           Align = alClient
           TabOrder = 1
-          ExplicitHeight = 353
           object grp_Other: TGroupBox
             Left = 1
             Top = 1
@@ -203,7 +199,6 @@ object Frm_Setting: TFrm_Setting
             Align = alTop
             Caption = 'IDE && Other'
             TabOrder = 0
-            ExplicitTop = 97
             object pnlIDE: TPanel
               AlignWithMargins = True
               Left = 5
@@ -270,7 +265,6 @@ object Frm_Setting: TFrm_Setting
     object tsPreDefinedQuestions: TTabSheet
       Caption = 'PreDefined Questions'
       ImageIndex = 1
-      ExplicitHeight = 515
       object pnlPredefinedQ: TPanel
         Left = 0
         Top = 0
@@ -278,7 +272,6 @@ object Frm_Setting: TFrm_Setting
         Height = 375
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 515
         object Btn_AddQuestion: TButton
           Left = 5
           Top = 11
@@ -297,7 +290,6 @@ object Frm_Setting: TFrm_Setting
           Margins.Top = 50
           Align = alClient
           TabOrder = 1
-          ExplicitHeight = 460
           object GridPanelPredefinedQs: TGridPanel
             Left = 0
             Top = 0
@@ -339,7 +331,6 @@ object Frm_Setting: TFrm_Setting
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 1
-    ExplicitTop = 545
     DesignSize = (
       445
       46)
