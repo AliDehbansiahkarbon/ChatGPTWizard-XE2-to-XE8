@@ -1,0 +1,61 @@
+package ChatGptWizard;
+
+{$R *.res}
+{$R *.dres}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  designide,
+  IndySystem,
+  IndyProtocols,
+  IndyCore,
+  bindcomp,
+  RESTComponents,
+  vclFireDAC,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon,
+  FireDACSqliteDriver,
+  vclimg;
+
+contains
+  UChatGptMain in 'UChatGptMain.pas',
+  UChatGPTThread in 'Utils\UChatGPTThread.pas',
+  UChatGPTProgress in 'Forms\UChatGPTProgress.pas' {Frm_Progress},
+  UChatGPTMenuHook in 'Utils\UChatGPTMenuHook.pas',
+  UChatGPTSetting in 'Forms\UChatGPTSetting.pas' {Frm_Setting},
+  UChatGPTQFrame in 'Forms\UChatGPTQFrame.pas' {Fram_Question: TFrame},
+  UChatGPTQuestion in 'Forms\UChatGPTQuestion.pas' {FrmChatGPT},
+  UChatGPTLexer in 'Lexer\UChatGPTLexer.pas',
+  UPascalLexer in 'Lexer\UPascalLexer.pas',
+  UPascalLexerTypes in 'Lexer\UPascalLexerTypes.pas',
+  UConsts in 'Utils\UConsts.pas',
+  UEditorHelpers in 'Utils\UEditorHelpers.pas',
+  UAbout in 'Forms\UAbout.pas' {Frm_About};
+
+end.
